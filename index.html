@@ -5,6 +5,14 @@
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
     <script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+      <script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster({
+            theme: 'tooltipster-punk',
+            contentAsHTML: true
+            });
+        });
+    </script>
 </head>
 <body style="text-align:center;">
 <!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -26,9 +34,7 @@
 </style>
 <g transform="translate(0, 10)">
 	<g>
-		<path class="st0" d="M100,153.9c300,0,300,0,600,0">
-            <title>Treated [n=xxxx]</title>
-        </path>
+		<path class="st0 tooltip" d="M100,153.9c300,0,300,0,600,0" title="Test" />
 		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="100" y1="338.1801" x2="700" y2="338.1801">
 			<stop  offset="0" style="stop-color:#5E4FA2"/>
 			<stop  offset="1" style="stop-color:#66C2A5"/>
