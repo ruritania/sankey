@@ -6,6 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="tooltipster-custom.css" />
 	
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	
+	<style type="text/css">
+		.tooltip_templates { display: none; }
+	</style>
 
     <script
   src="https://code.jquery.com/jquery-1.12.4.min.js"
@@ -84,7 +88,7 @@
 	</g>
 	<g>
 		<g>
-			<rect class="st6 tooltip" width="100" height="337.8" title="<strong>Treated</strong> (n=551)<br />Nintedanib (n=224)<br />Pirfenidone (n=293)<br />Nintedanib and pirfenidone* (n=34)"/>
+			<rect class="st6 tooltip" width="100" height="337.8" data-tooltip-content="#tooltip-1" />
 			<text x="50" y="169" text-anchor="middle" class="st7 st8 st9">Treated</text>
 		</g>
 		<g>
@@ -96,7 +100,7 @@
 		<g>
 			<rect x="700" y="452.8" class="st11" width="100" height="47.2"/>
 			<g>
-				<text x="750" y="452.8" text-anchor="middle"><tspan x="750" y="465" class="st7 st8 st9">No treatment</tspan><tspan x="750" y="477" class="st7 st8 st9">information</tspan><tspan x="750" y="491" class="st7 st8 st9">available</tspan></text>
+				<text x="750" y="452.8" text-anchor="middle"><tspan x="750" y="467" class="st7 st8 st9">No treatment</tspan><tspan x="750" y="479" class="st7 st8 st9">information</tspan><tspan x="750" y="491" class="st7 st8 st9">available</tspan></text>
 			</g>
 		</g>
 		<g>
@@ -112,4 +116,14 @@
 	</g>
 </g>
 </svg>
+	<div class="tooltip_templates">
+    <span id="tooltip-1">
+        <strong>Treated</strong> (n=551)
+		<p>
+			Nintedanib (n=224)<br />
+			Pirfenidone (n=293)<br />
+			Nintedanib and pirfenidone* (n=34)
+		</p>
+    </span>
+</div>
 </body>
