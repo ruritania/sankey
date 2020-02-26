@@ -22,9 +22,22 @@
     <script>
       $(document).ready(function() {
           $('.tooltip').tooltipster();
-          $('.tooltip-left').tooltipster({{
+          $('.tooltip-left').tooltipster({
 			  theme: ['tooltipster-shadow', 'tooltipster-shadow-customized'],
-			  position: 'right'
+			  trigger: 'custom', // add custom trigger
+			  	side: 'right',
+			   triggerOpen: { // open tooltip when element is clicked, tapped (mobile) or hovered
+				   click: true,
+				   tap: true,
+				   mouseenter: true
+				   },
+				  triggerClose: { // close tooltip when element is clicked again, tapped or when the mouse leaves it
+				   click: true,
+				   scroll: false, // ensuring that scrolling mobile is not tapping!
+				   tap: true,
+				   mouseleave: true
+				   }
+			 	}
 		  })
       });
     </script>
