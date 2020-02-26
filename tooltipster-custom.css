@@ -12,7 +12,11 @@
 	color: #000000;
 	padding: 8px;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
+	font-size: 24px;
 	font-weight: normal;
-	line-height: 17px;
+	line-height: normal;
+}
+
+.tooltipster-sidetip.tooltipster-shadow.tooltipster-shadow-customized .tooltipster-content strong {
+	font-weight: bold;
 }
