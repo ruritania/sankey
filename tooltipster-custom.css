@@ -6,6 +6,7 @@
 	border: 3px solid #000000;
 	border-radius: 6px;
 	box-shadow: 5px 5px 2px 0 rgba(0,0,0,0.4);
+	padding: 10px;
 }
 
 .tooltipster-sidetip.tooltipster-shadow.tooltipster-shadow-customized .tooltipster-content {
