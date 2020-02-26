@@ -9,7 +9,8 @@
 }
 
 .tooltipster-sidetip.tooltipster-shadow.tooltipster-shadow-customized .tooltipster-content {
-	color: blue;
+	color: #000000;
 	padding: 8px;
-	font-family: 'Montserrat', ;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.875em;
 }
