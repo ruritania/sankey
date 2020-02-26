@@ -21,7 +21,9 @@
     <script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
     <script>
       $(document).ready(function() {
-          $('.tooltip').tooltipster();
+          $('.tooltip').tooltipster({
+			  theme: ['tooltipster-shadow', 'tooltipster-shadow-customized']
+		  });
           $('.tooltip-left').tooltipster({
 			  theme: ['tooltipster-shadow', 'tooltipster-shadow-customized'],
 			  side: 'right'
