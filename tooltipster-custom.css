@@ -20,3 +20,8 @@
 .tooltipster-sidetip.tooltipster-shadow.tooltipster-shadow-customized .tooltipster-content strong {
 	font-weight: bold;
 }
+
+.tooltipster-sidetip.tooltipster-shadow.tooltipster-shadow-customized .tooltipster-content em {
+	font-style: italic;
+	font-size: 18px;
+}
