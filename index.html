@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" />
+    <script type="text/javascript" src="tooltipster/dist/js/plugins/tooltipster/SVG/tooltipster-SVG.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="tooltipster-custom.css" />
 	
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -28,6 +29,7 @@
           $('.tooltip').tooltipster({
           theme: ['tooltipster-shadow', 'tooltipster-shadow-customized'],
           contentAsHTML: true, // set title content to html
+			  side: right,
           trigger: 'custom', // add custom trigger
            triggerOpen: { // open tooltip when element is clicked, tapped (mobile) or hovered
                click: true,
