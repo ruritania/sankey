@@ -2,8 +2,8 @@
 /* CSS Document */
 
 .tooltipster-sidetip.tooltipster-shadow.tooltipster-shadow-customized .tooltipster-box {
-	background: grey;
-	border: 3px solid red;
+	background: #FFFFFF;
+	border: 3px solid #000000;
 	border-radius: 6px;
 	box-shadow: 5px 5px 2px 0 rgba(0,0,0,0.4);
 }
@@ -11,4 +11,5 @@
 .tooltipster-sidetip.tooltipster-shadow.tooltipster-shadow-customized .tooltipster-content {
 	color: blue;
 	padding: 8px;
+	font-family: 'Montserrat', ;
 }
