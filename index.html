@@ -43,6 +43,20 @@
                }
         });
           $('.tooltip-left').tooltipster({
+			  theme: ['tooltipster-shadow', 'tooltipster-shadow-customized'],
+			  contentAsHTML: true, // set title content to html
+			  trigger: 'custom', // add custom trigger
+			   triggerOpen: { // open tooltip when element is clicked, tapped (mobile) or hovered
+				   click: true,
+				   tap: true,
+				   mouseenter: true
+				   },
+				  triggerClose: { // close tooltip when element is clicked again, tapped or when the mouse leaves it
+				   click: true,
+				   scroll: false, // ensuring that scrolling mobile is not tapping!
+				   tap: true,
+				   mouseleave: true
+				   }
 			  side: 'right'
 		  })
       });
@@ -103,7 +117,7 @@
 			<text x="50" y="169" text-anchor="middle" class="st7 st8 st9">Treated</text>
 		</g>
 		<g>
-			<rect y="347.8" class="st10" width="100" height="141.6" data-tooltip-content="#tooltip-untreated-left"/>
+			<rect y="347.8" class="st10 tooltip-left" width="100" height="141.6" data-tooltip-content="#tooltip-untreated-left"/>
 			<g>
 				<text x="50" y="427" text-anchor="middle" class="st7 st8 st9">Untreated</text>
 			</g>
