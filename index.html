@@ -22,7 +22,8 @@
     <script>
       $(document).ready(function() {
           $('.tooltip').tooltipster();
-          $('.tooltip-left').tooltipster({
+          $('.tooltip-left').tooltipster({{
+			  theme: ['tooltipster-shadow', 'tooltipster-shadow-customized'],
 			  position: 'right'
 		  })
       });
@@ -79,7 +80,7 @@
 	</g>
 	<g>
 		<g>
-			<rect class="st6 tooltip tooltip-left" width="100" height="337.8" data-tooltip-content="#tooltip-treated-left" />
+			<rect class="st6 tooltip-left" width="100" height="337.8" data-tooltip-content="#tooltip-treated-left" />
 			<text x="50" y="169" text-anchor="middle" class="st7 st8 st9">Treated</text>
 		</g>
 		<g>
