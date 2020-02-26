@@ -21,22 +21,7 @@
     <script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
     <script>
       $(document).ready(function() {
-          $('.tooltip').tooltipster({
-          theme: ['tooltipster-shadow', 'tooltipster-shadow-customized'],
-          contentAsHTML: true, // set title content to html
-          trigger: 'custom', // add custom trigger
-           triggerOpen: { // open tooltip when element is clicked, tapped (mobile) or hovered
-               click: true,
-               tap: true,
-               mouseenter: true
-               },
-              triggerClose: { // close tooltip when element is clicked again, tapped or when the mouse leaves it
-               click: true,
-               scroll: false, // ensuring that scrolling mobile is not tapping!
-               tap: true,
-               mouseleave: true
-               }
-		});
+          $('.tooltip').tooltipster();
           $('.tooltip-left').tooltipster({
 			  position: 'right'
 		  })
@@ -69,7 +54,7 @@
 </style>
 <g transform="translate(0, 10)">
 	<g>
-        <path class="st0 tooltip" d="M100,153.9c300,0,300,0,600,0" title="Treated in enrolment window and in first follow-up window <em>(n=502)</em>" />
+        <path class="st0 tooltip" d="M100,153.9c300,0,300,0,600,0" data-tooltip-content="#tooltip-treated-treated" />
 		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="100" y1="338.1801" x2="700" y2="338.1801">
 		<stop  offset="0" style="stop-color:#00529b"/>
 		<stop  offset="1" style="stop-color:#8ed8f8"/>
@@ -131,6 +116,11 @@
 			Nintedanib and pirfenidone* <em>(n=34)</em>
 		</p>
     </span>
+		<span id="tooltip-treated-treated">
+			Treated in enrolment window<br />
+			and in first follow-up window<br />
+			<em>(n=502)</em>
+		</span>
 		<span id="tooltip-untreated-left">
 			Untreated <em>(n=231)</em>
 		</span>
