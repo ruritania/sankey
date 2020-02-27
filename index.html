@@ -22,11 +22,31 @@
     <script>
       $(document).ready(function() {
           $('.tooltip').tooltipster({
-			  theme: ['tooltipster-shadow', 'tooltipster-shadow-customized']
+			  theme: ['tooltipster-shadow', 'tooltipster-shadow-customized'],
+			  trigger: 'custom',
+				triggerOpen: {
+					mouseenter: true,
+					touchstart: true
+				},
+				triggerClose: {
+					click: true,
+					scroll: true,
+					tap: true
+				}
 		  });
           $('.tooltip-left').tooltipster({
 			  theme: ['tooltipster-shadow', 'tooltipster-shadow-customized'],
-			  side: 'right'
+			  side: 'right',
+			  trigger: 'custom',
+				triggerOpen: {
+					mouseenter: true,
+					touchstart: true
+				},
+				triggerClose: {
+					click: true,
+					scroll: true,
+					tap: true
+				}
 		  });
       });
     </script>
