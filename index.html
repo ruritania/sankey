@@ -9,8 +9,34 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	
 	<style type="text/css">
+		body
+		{
+			font-family: 'Montserrat', sans-serif;
+			font-size: 24px;
+			font-weight: normal;
+			line-height: normal;
+		}
 		.tooltip_templates { 
 			display: none; 
+		}
+		
+		#axis-labels
+		{
+			position: relative;
+			width: 100%;
+		}
+		#axis-left
+		{
+			position: relative;
+			width: 50%;
+			text-align: left;
+			padding: 10px;
+		}
+		#axis-right
+		{
+			position: relative;
+			float: right;
+			text-align: right;
 		}
 	</style>
 
@@ -52,6 +78,10 @@
     </script>
 </head>
 <body style="text-align:center;">
+	<div id="axis-labels">
+		<div id="axis-left">Enrolment</div>
+		<div id="axis-right">First follow up</div>
+	</div>
 <!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 800 520" style="enable-background:new 0 0 800 520;" xml:space="preserve">
