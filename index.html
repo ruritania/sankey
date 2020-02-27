@@ -82,23 +82,23 @@
 		<stop  offset="0" style="stop-color:#00529b"/>
 		<stop  offset="1" style="stop-color:#8ed8f8"/>
 		</linearGradient>
-		<path class="st1 tooltip"  title="Treated in enrolment window but stopped in first follow-up window (n=32)" d="M100,317.5c300,0,300,41.3,600,41.3"/>
+		<path class="st1 tooltip" d="M100,317.5c300,0,300,41.3,600,41.3" data-tooltip-content="#tooltip-treated-untreated"/>
 		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="100" y1="395.2874" x2="700" y2="395.2874">
 			<stop  offset="0" style="stop-color:#00529b"/>
 			<stop  offset="1" style="stop-color:#88c540"/>
 		</linearGradient>
-		<path class="st2" d="M100,332.6c300,0,300,125.4,600,125.4"/>
+		<path class="st2" d="M100,332.6c300,0,300,125.4,600,125.4" data-tooltip-content="#tooltip-treated-noinfo"/>
 		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="100" y1="343.3908" x2="700" y2="343.3908">
 			<stop  offset="0" style="stop-color:#8ed8f8"/>
 			<stop  offset="1" style="stop-color:#00529b"/>
 		</linearGradient>
-		<path class="st3" d="M100,363.4c300,0,300-40,600-40"/>
-		<path class="st4" d="M100,416.1c300,0,300-10.4,600-10.4"/>
+		<path class="st3" d="M100,363.4c300,0,300-40,600-40" data-tooltip-content="#tooltip-untreated-treated"/>
+		<path class="st4" d="M100,416.1c300,0,300-10.4,600-10.4" data-tooltip-content="#tooltip-untreated-untreated"/>
 		<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="100" y1="476.3027" x2="700" y2="476.3027">
 			<stop  offset="0" style="stop-color:#8ed8f8"/>
 			<stop  offset="1" style="stop-color:#88c540"/>
 		</linearGradient>
-		<path class="st5" d="M100,471.3c300,0,300,10,600,10"/>
+		<path class="st5" d="M100,471.3c300,0,300,10,600,10" data-tooltip-content="#tooltip-untreated-noinfo"/>
 	</g>
 	<g>
 		<g>
@@ -144,8 +144,46 @@
 			and in first follow-up window<br />
 			<em>(n=502)</em>
 		</span>
+		<span id="tooltip-treated-untreated">
+			Treated in enrolment window<br />
+			but stopped in first follow-up window<br>		
+			<em>(n=32)</em>
+		</span>
+		<span id="tooltip-treated-noinfo">
+			Treated in enrolment window but<br />
+			no treatment information available<br />
+			in first follow-up window<br />
+			<em>(n=17)</em>
+			<ul>
+				<li>Death, lung transplant or withdrawal <em>(n=5)</em></li>
+				<li>No follow-up medical chart review <em>(n=7)</em></li>
+				<li>Incomplete treatment information <em>(n=5)</em></li>
+			</ul>
+		</span>
 		<span id="tooltip-untreated-left">
 			Untreated <em>(n=231)</em>
 		</span>
+		<span id="tooltip-untreated-treated">
+			Untreated in enrolment window<br />
+			but treated in first follow-up window<br>
+			<em>(n=51)</em>
+		</span>
+		<span id="tooltip-untreated-untreated">
+			Untreated in enrolment window<br />
+			but treated in first follow-up window<br>
+			<em>(n=51)</em>
+		</span>
+		<span id="tooltip-untreated-noinfo">
+			Untreated in enrolment window but<br />
+			no treatment information available<br />
+			in first follow-up window<br />
+			<em>(n=59)</em>
+			<ul>
+				<li>Death, lung transplant or withdrawal <em>(n=22)</em></li>
+				<li>No follow-up medical chart review <em>(n=33)</em></li>
+				<li>Incomplete treatment information <em>(n=4)</em></li>
+			</ul>
+		</span>
+		
 </div>
 </body>
