@@ -12,7 +12,7 @@
 		body
 		{
 			font-family: 'Montserrat', sans-serif;
-			font-size: 24px;
+			font-size: 18px;
 			font-weight: normal;
 			line-height: normal;
 		}
@@ -24,25 +24,27 @@
 		{
 			position: relative;
 			width: 100%;
+			align-content: center;
 		}
 		.axis-label
 		{
 			position: relative;
 			float: left;
+			width: 48%;
+			padding: 1%;
 		}
 		#axis-left
 		{
-			position: relative;
-			width: 50%;
 			text-align: left;
-			padding: 10px;
 		}
 		#axis-right
 		{
-			position: relative;
-			width: 50%;
 			text-align: right;
-			padding: 10px;
+		}
+		#axis-labels em
+		{
+			font-style: oblique;
+			font-size: 14px;
 		}
 	</style>
 
@@ -88,8 +90,8 @@
 </head>
 <body style="text-align:center;">
 	<div id="axis-labels">
-		<div class="axis-label" id="axis-left">Enrolment</div>
-		<div class="axis-label" id="axis-right">First follow up</div>
+		<div class="axis-label" id="axis-left">Enrolment window<br><em>(n=782)</em></div>
+		<div class="axis-label" id="axis-right">First follow-up window<br><em>(n=706)</em></div>
 	</div>
 <!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
