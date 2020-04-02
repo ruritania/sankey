@@ -18,9 +18,27 @@
 				[ 'Untreated', 'Untreated ', 121],
 				[ 'Untreated', 'No treatment information available', 59]
 			]);
+		  
+			var colors = ['#00529b','#00529b','#8ed8f8','#88c540','#8ed8f8'];
 
 			// Sets chart options.
 			var options = {
+				sankey: {
+					node: {
+						colors: colors,
+						width: 20,
+						label: { 
+							fontName: 'Montserrat',
+							fontSize: 12,
+							color: '#FFFFFF',
+							bold: true
+						}
+					},
+					link: {
+						colorMode: 'gradient',
+						colors: colors
+					}
+				}
 			};
 
 			// Instantiates and draws our chart, passing in some options.
