@@ -10,13 +10,14 @@
         data.addColumn('string', 'Enrolment window');
         data.addColumn('string', 'First follow-up window');
         data.addColumn('number', 'Number');
+		dataTable.addColumn({type: 'string', role: 'tooltip'});
         data.addRows([
-          [ 'Treated', 'Treated ', 502 ],
-          [ 'Treated', 'Untreated ', 32 ],
-          [ 'Treated', 'No treatment information available', 17 ],
-          [ 'Untreated', 'Treated ', 51 ],
-          [ 'Untreated', 'Untreated ', 121 ],
-          [ 'Untreated', 'No treatment information available', 59 ]
+          [ 'Treated', 'Treated ', 502, 'Tooltip' ],
+          [ 'Treated', 'Untreated ', 32, 'Tooltip' ],
+          [ 'Treated', 'No treatment information available', 17, 'Tooltip' ],
+          [ 'Untreated', 'Treated ', 51, 'Tooltip' ],
+          [ 'Untreated', 'Untreated ', 121, 'Tooltip' ],
+          [ 'Untreated', 'No treatment information available', 59, 'Tooltip' ]
         ]);
 		  
 		var colors = ['#00529b','#00529b','#8ed8f8','#88c540','#8ed8f8'];
@@ -26,8 +27,7 @@
 			sankey: {
 				node: {
 					colors: colors,
-					width: 100,
-					labelPadding: -50
+					width: 20,
 				},
 				link: {
 				  	colorMode: 'gradient',
