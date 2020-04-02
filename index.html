@@ -1,6 +1,7 @@
 <html>
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script type="text/javascript">
       google.charts.load('current', {'packages':['sankey']});
       google.charts.setOnLoadCallback(drawChart);
@@ -12,12 +13,12 @@
         data.addColumn('number', 'Number');
 		data.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
         data.addRows([
-          [ 'Treated', 'Treated ', 502, 'Treated in enrolment window and in first follow-up window (n=502)' ],
-          [ 'Treated', 'Untreated ', 32, 'Treated in enrolment window but stopped in first follow-up window (n=32)' ],
-          [ 'Treated', 'No treatment information available', 17, 'Treated in enrolment window but no treatment information available in first follow-up window (n=17)<ul><li>Death, lung transplant or withdrawal (n=5)</li><li>No follow-up medical chart review (n=7)</li><li>Incomplete treatment information (n=5)</li></ul>' ],
-          [ 'Untreated', 'Treated ', 51, 'Untreated in enrolment window but treated in first follow-up window (n=51)' ],
-          [ 'Untreated', 'Untreated ', 121, 'Untreated in enrolment window and remained untreated in first follow-up window (n=121)' ],
-          [ 'Untreated', 'No treatment information available', 59, 'Untreated in enrolment window but no treatment information available in first follow-up window (n=59)<ul><li>Death, lung transplant or withdrawal (n=22)</li><li>No follow-up medical chart review (n=33)</li><li>Incomplete treatment information (n=4)</li></ul>' ]
+          [ 'Treated', 'Treated ', 502, "<p>Treated in enrolment window and in first follow-up window (n=502)</p>" ],
+          [ 'Treated', 'Untreated ', 32, "<p>Treated in enrolment window but stopped in first follow-up window (n=32)</p>"" ],
+          [ 'Treated', 'No treatment information available', 17, "<p>Treated in enrolment window but no treatment information available in first follow-up window (n=17)<ul><li>Death, lung transplant or withdrawal (n=5)</li><li>No follow-up medical chart review (n=7)</li><li>Incomplete treatment information (n=5)</li></ul></p>" ],
+          [ 'Untreated', 'Treated ', 51, "Untreated in enrolment window but treated in first follow-up window (n=51)" ],
+          [ 'Untreated', 'Untreated ', 121, "Untreated in enrolment window and remained untreated in first follow-up window (n=121)" ],
+          [ 'Untreated', 'No treatment information available', 59, "Untreated in enrolment window but no treatment information available in first follow-up window (n=59)<ul><li>Death, lung transplant or withdrawal (n=22)</li><li>No follow-up medical chart review (n=33)</li><li>Incomplete treatment information (n=4)</li></ul>" ]
         ]);
 		  
 		var colors = ['#00529b','#00529b','#8ed8f8','#88c540','#8ed8f8'];
@@ -31,6 +32,12 @@
 				node: {
 					colors: colors,
 					width: 20,
+					label: { 
+						fontName: 'Monserrat',
+                        fontSize: 12,
+                        color: '#FFFFFF',
+                        bold: true
+					}
 				},
 				link: {
 				  	colorMode: 'gradient',
