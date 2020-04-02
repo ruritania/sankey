@@ -7,16 +7,16 @@
 
       function drawChart() {
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'From');
-        data.addColumn('string', 'To');
-        data.addColumn('number', 'Weight');
+        data.addColumn('string', 'Enrolment window');
+        data.addColumn('string', 'First follow-up window');
+        data.addColumn('number', 'Number');
         data.addRows([
-          [ 'A', 'X', 5 ],
-          [ 'A', 'Y', 7 ],
-          [ 'A', 'Z', 6 ],
-          [ 'B', 'X', 2 ],
-          [ 'B', 'Y', 9 ],
-          [ 'B', 'Z', 4 ]
+          [ 'Treated', 'Treated', 502 ],
+          [ 'Treated', 'Untreated', 32 ],
+          [ 'Treated', 'No treatment information available', 17 ],
+          [ 'Untreated', 'Treated', 51 ],
+          [ 'Untreated', 'Untreated', 121 ],
+          [ 'Untreated', 'No treatment information available', 59 ]
         ]);
 
         // Sets chart options.
