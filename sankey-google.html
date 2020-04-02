@@ -13,11 +13,11 @@
 			data.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 			data.addRows([
 				[ 'Treated', 'Treated ', 502, "<p>Treated in enrolment window and in first follow-up window <br /><em>(n=502)</em></p>"],
-				[ 'Treated', 'Untreated ', 32, "<p>Tooltip</p>" ],
-				[ 'Treated', 'No treatment information available', 17, "<p>Tooltip</p>"],
-				[ 'Untreated', 'Treated ', 51, "<p>Tooltip</p>"],
-				[ 'Untreated', 'Untreated ', 121, "<p>Tooltip</p>"],
-				[ 'Untreated', 'No treatment information available', 59, "<p>Tooltip</p>"]
+				[ 'Treated', 'Untreated ', 32, "<p>Treated in enrolment window but stopped in first follow-up window (n=32)</p>" ],
+				[ 'Treated', 'No treatment information available', 17, "<p>Treated in enrolment window but no treatment information available in first follow-up window (n=17)/Death, lung transplant or withdrawal (n=5)/No follow-up medical chart review (n=7)/Incomplete treatment information (n=5)</p>"],
+				[ 'Untreated', 'Treated ', 51, "<p>Untreated in enrolment window but treated in first follow-up window (n=51)</p>"],
+				[ 'Untreated', 'Untreated ', 121, "<p>Untreated in enrolment window and remained untreated in first follow-up window (n=121)</p>"],
+				[ 'Untreated', 'No treatment information available', 59, "<p>Untreated in enrolment window but no treatment information available in first follow-up window (n=59)Death, lung transplant or withdrawal (n=22)No follow-up medical chart review (n=33)Incomplete treatment information (n=4)</p>"]
 			]);
 		  
 			var colors = ['#00529b','#00529b','#8ed8f8','#88c540','#8ed8f8'];
