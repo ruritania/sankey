@@ -10,19 +10,24 @@
         data.addColumn('string', 'Enrolment window');
         data.addColumn('string', 'First follow-up window');
         data.addColumn('number', 'Number');
+        data.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
         data.addRows([
-          [ 'Treated', 'Treated', 502 ],
-          [ 'Treated', 'Untreated', 32 ],
-          [ 'Treated', 'No treatment information available', 17 ],
-          [ 'Untreated', 'Treated', 51 ],
-          [ 'Untreated', 'Untreated', 121 ],
-          [ 'Untreated', 'No treatment information available', 59 ]
+          [ 'Treated', 'Treated', 502, "<p><b>Treated in enrollment window and in first follow-up window</b><p><p>[n=502]</p>" ],
+          [ 'Treated', 'Untreated', 32 "<p><b>Treated in enrollment window and in first follow-up window</b><p><p>[n=502]</p>"],
+          [ 'Treated', 'No treatment information available', 17 "<p><b>Treated in enrollment window and in first follow-up window</b><p><p>[n=502]</p>"],
+          [ 'Untreated', 'Treated', 51 "<p><b>Treated in enrollment window and in first follow-up window</b><p><p>[n=502]</p>"],
+          [ 'Untreated', 'Untreated', 121 "<p><b>Treated in enrollment window and in first follow-up window</b><p><p>[n=502]</p>"],
+          [ 'Untreated', 'No treatment information available', 59 "<p><b>Treated in enrollment window and in first follow-up window</b><p><p>[n=502]</p>"]
         ]);
 
         // Sets chart options.
         var options = {
-          width: 600,
+			
         };
+		  
+        options["tooltip"] = {isHtml:'true'};
+		options["sankey"] = {link:{colorMode:'gradient'}, 
+    										node:{nodePadding:30, colors: ['#1b66b7','#1b66b7','#B71C1C','#FF6F00','#B71C1C']}};
 
         // Instantiates and draws our chart, passing in some options.
         var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
@@ -31,6 +36,6 @@
     </script>
   </head>
   <body>
-    <div id="sankey_basic" style="width: 900px; height: 300px;"></div>
+    <div id="sankey_basic" style="width: 100%;"></div>
   </body>
 </html>
