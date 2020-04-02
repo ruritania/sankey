@@ -1,36 +1,35 @@
 <html>
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['sankey']});
-      google.charts.setOnLoadCallback(drawChart);
+	<head>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+			google.charts.load('current', {'packages':['sankey']});
+			google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Enrolment window');
-        data.addColumn('string', 'First follow-up window');
-        data.addColumn('number', 'Number');
-        data.addRows([
-          [ 'A', 'X', 5 ],
-          [ 'A', 'Y', 7 ],
-          [ 'A', 'Z', 6 ],
-          [ 'B', 'X', 2 ],
-          [ 'B', 'Y', 9 ],
-          [ 'B', 'Z', 4 ]
-        ]);
+			function drawChart() {
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Enrolment window');
+			data.addColumn('string', 'First follow-up window');
+			data.addColumn('number', 'Number');
+			data.addRows([
+				[ 'Treated', 'Treated ', 502],
+				[ 'Treated', 'Untreated ', 32 ],
+				[ 'Treated', 'No treatment information available', 17],
+				[ 'Untreated', 'Treated ', 51],
+				[ 'Untreated', 'Untreated ', 121],
+				[ 'Untreated', 'No treatment information available', 59]
+			]);
 
-        // Sets chart options.
-        var options = {
-          width: 600,
-        };
+			// Sets chart options.
+			var options = {
+			};
 
-        // Instantiates and draws our chart, passing in some options.
-        var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <div id="sankey_basic" style="width: 900px; height: 300px;"></div>
-  </body>
+			// Instantiates and draws our chart, passing in some options.
+			var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+				chart.draw(data, options);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="sankey_basic" style="left: 0px; top: 0px; width: 100%; position: absolute; min-height: 500px;"></div>
+	</body>
 </html>
