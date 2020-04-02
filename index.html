@@ -13,7 +13,7 @@
         data.addColumn('number', 'Number');
 		data.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
         data.addRows([
-          [ 'Treated', 'Treated ', 502, "<p style='padding: 20px; font-family: Montserrat, sans-serif;'>Treated in enrolment window and in first follow-up window (n=502)</p>" ],
+          [ 'Treated', 'Treated ', 502, "<p style='padding: 20px;'>Treated in enrolment window and in first follow-up window (n=502)</p>" ],
           [ 'Treated', 'Untreated ', 32, "<p>Treated in enrolment window but stopped in first follow-up window (n=32)</p>" ],
           [ 'Treated', 'No treatment information available', 17, "<p>Treated in enrolment window but no treatment information available in first follow-up window (n=17)<ul><li>Death, lung transplant or withdrawal (n=5)</li><li>No follow-up medical chart review (n=7)</li><li>Incomplete treatment information (n=5)</li></ul></p>" ],
           [ 'Untreated', 'Treated ', 51, "Untreated in enrolment window but treated in first follow-up window (n=51)" ],
@@ -57,7 +57,8 @@
   </head>
   <body>
 	  <div id="chart_wrap" style="width: 100%; overflow: hidden; padding-bottom: 100%; position: relative; min-height: 500px;">
-	    <div id="sankey_basic" style="left: 0px; top: 0px; width: 100%; position: absolute; min-height: 500px;"></div>
+		  	<style>div.google-visualization-tooltip { font-family: 'Montserrat', sans-serif; }</style>
+	    	<div id="sankey_basic" style="left: 0px; top: 0px; width: 100%; position: absolute; min-height: 500px;"></div>
 	  </div>
   </body>
 </html>
