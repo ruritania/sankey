@@ -10,13 +10,14 @@
 			data.addColumn('string', 'Enrolment window');
 			data.addColumn('string', 'First follow-up window');
 			data.addColumn('number', 'Number');
+			data.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 			data.addRows([
-				[ 'Treated', 'Treated ', 502],
-				[ 'Treated', 'Untreated ', 32 ],
-				[ 'Treated', 'No treatment information available', 17],
-				[ 'Untreated', 'Treated ', 51],
-				[ 'Untreated', 'Untreated ', 121],
-				[ 'Untreated', 'No treatment information available', 59]
+				[ 'Treated', 'Treated ', 502, "<p>Tooltip</p>"],
+				[ 'Treated', 'Untreated ', 32, "<p>Tooltip</p>" ],
+				[ 'Treated', 'No treatment information available', 17, "<p>Tooltip</p>"],
+				[ 'Untreated', 'Treated ', 51, "<p>Tooltip</p>"],
+				[ 'Untreated', 'Untreated ', 121, "<p>Tooltip</p>"],
+				[ 'Untreated', 'No treatment information available', 59, "<p>Tooltip</p>"]
 			]);
 		  
 			var colors = ['#00529b','#00529b','#8ed8f8','#88c540','#8ed8f8'];
