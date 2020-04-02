@@ -50,6 +50,27 @@
 			var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
 				chart.draw(data, options);
 			}
+			
+			function myClickHandler(){
+				var selection = chart.getSelection();
+				var message = '';
+
+				for (var i = 0; i < selection.length; i++) {
+				var item = selection[i];
+				if (item.row != null && item.column != null) {
+				  message += '{row:' + item.row + ',column:' + item.column + '}';
+				} else if (item.row != null) {
+				  message += '{row:' + item.row + '}';
+				} else if (item.column != null) {
+				  message += '{column:' + item.column + '}';
+				}
+				}
+				if (message == '') {
+				message = 'nothing';
+				}
+				alert('You selected ' + message);
+			}
+			
 		</script>
 	</head>
 	<body>
@@ -61,7 +82,7 @@
 					font-size: 12px;
 				}
 				div.google-visualization-tooltip p { 
-					padding: 5px; 
+					padding: 5px 10px; 
 				}
 				div.google-visualization-tooltip ul { 
 					list-style-type: circle;
