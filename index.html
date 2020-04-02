@@ -26,12 +26,6 @@
         // Sets chart options.
         var options = {
 			sankey: {
-				tooltip: {
-					isHtml: true,
-					textStyle: {
-						fontName: 'Monserrat'
-					}
-				},
 				node: {
 					colors: colors,
 					width: 20,
@@ -46,7 +40,13 @@
 				  	colorMode: 'gradient',
 				  	colors: colors
 				}
-		  	}
+		  	},
+			tooltip: {
+				isHtml: true,
+				textStyle: {
+					fontName: 'Monserrat'
+				}
+			}
         };
 
         // Instantiates and draws our chart, passing in some options.
