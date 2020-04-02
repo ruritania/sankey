@@ -10,7 +10,7 @@
         data.addColumn('string', 'Enrolment window');
         data.addColumn('string', 'First follow-up window');
         data.addColumn('number', 'Number');
-		data.addColumn({type: 'string', role: 'tooltip'});
+		data.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
         data.addRows([
           [ 'Treated', 'Treated ', 502, 'Treated in enrolment window and in first follow-up window (n=502)' ],
           [ 'Treated', 'Untreated ', 32, 'Treated in enrolment window but stopped in first follow-up window (n=32)' ],
