@@ -11,14 +11,13 @@
 			data.addColumn('string', 'First follow-up window');
 			data.addColumn('number', 'Number');
 			data.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
-			data.addColumn({type: 'string', role: 'annotation', 'p': {'html': true}});
 			data.addRows([
-				[ 'Treated (n=551)', 'Treated', 502, "<p>Treated in enrolment window and in first follow-up window <br /><em>(n=502)</em></p>","*"],
-				[ 'Treated (n=551)', 'Untreated', 32, "<p>Treated in enrolment window but stopped in first follow-up window<br /><em>(n=32)</em></p>","*"],
-				[ 'Treated (n=551)', 'No treatment information available', 17, "<p>Treated in enrolment window but no treatment information available in first follow-up window <em>(n=17)</em><ul><li>Death, lung transplant or withdrawal <em>(n=5)</em></li><li>No follow-up medical chart review <em>(n=7)</em></li><li>Incomplete treatment information <em>(n=5)</em></li></ul>","*"],
-				[ 'Untreated (n=231)', 'Treated', 51, "<p>Untreated in enrolment window but treated in first follow-up window<br /><em>(n=51)</em></p>","*"],
-				[ 'Untreated (n=231)', 'Untreated', 121, "<p>Untreated in enrolment window and remained untreated in first follow-up window<br /><em>(n=121)</em></p>","*"],
-				[ 'Untreated (n=231)', 'No treatment information available', 59, "<p>Untreated in enrolment window but no treatment information available in first follow-up window <em>(n=59)</em><ul><li>Death, lung transplant or withdrawal <em>(n=22)</em></li><li>No follow-up medical chart review <em>(n=33)</em></li><li>Incomplete treatment information <em>(n=4)</em></li></ul></p>","*"]
+				[ 'Treated* (n=551)', 'Treated', 502, "<p>Treated in enrolment window and in first follow-up window <br /><em>(n=502)</em></p>"],
+				[ 'Treated* (n=551)', 'Untreated', 32, "<p>Treated in enrolment window but stopped in first follow-up window<br /><em>(n=32)</em></p>"],
+				[ 'Treated* (n=551)', 'No treatment information available', 17, "<p>Treated in enrolment window but no treatment information available in first follow-up window <em>(n=17)</em><ul><li>Death, lung transplant or withdrawal <em>(n=5)</em></li><li>No follow-up medical chart review <em>(n=7)</em></li><li>Incomplete treatment information <em>(n=5)</em></li></ul>"],
+				[ 'Untreated (n=231)', 'Treated', 51, "<p>Untreated in enrolment window but treated in first follow-up window<br /><em>(n=51)</em></p>"],
+				[ 'Untreated (n=231)', 'Untreated', 121, "<p>Untreated in enrolment window and remained untreated in first follow-up window<br /><em>(n=121)</em></p>"],
+				[ 'Untreated (n=231)', 'No treatment information available', 59, "<p>Untreated in enrolment window but no treatment information available in first follow-up window <em>(n=59)</em><ul><li>Death, lung transplant or withdrawal <em>(n=22)</em></li><li>No follow-up medical chart review <em>(n=33)</em></li><li>Incomplete treatment information <em>(n=4)</em></li></ul></p>"]
 			]);
 		  
 			var colors = ['#00529b','#00529b','#8ed8f8','#88c540','#8ed8f8'];
@@ -100,6 +99,11 @@
 					font-family: 'Montserrat', sans-serif;
 					font-size: 12px;
 				}
+				div.sankey-footer {
+					position: relative;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 12px;
+				}
 			</style>
 			<div id="chart_titles" style="width: 100%; overflow: hidden; position: relative; min-height: 500px;">
 				<div class="sankey-axis-label" id="axis-left" style="text-align: left; left: 0px;">
@@ -113,7 +117,15 @@
 					<em>(n=706)</em>
 				</div>
 			</div>
-			<div id="sankey_basic" style="left: 0px; top: 50px; width: 100%; position: absolute; min-height: 500px;"></div>
+			<div id="sankey_basic" style="left: 0px; top: 50px; width: 100%; position: absolute; min-height: 400px;"></div>
+			<div id="sankey-footer">
+				<strong>* Treated</strong> <em>(n=551)</em>
+				<p>
+					Nintedanib <em>(n=224)</em><br />
+					Pirfenidone <em>(n=293)</em><br />
+					Nintedanib and pirfenidone <em>(n=34)</em>
+				</p>
+			</div>
 		</div>
 	</body>
 </html>
