@@ -93,12 +93,21 @@
 				div.google-visualization-tooltip ul { 
 					list-style-type: circle;
 				}
+				div.sankey-axis-label {
+					position: relative;
+					float: left;
+					width: 48%;
+					padding: 1%;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 12px;
+					font-weight: bold;
+				}
 			</style>
 			<div id="chart_titles" style="width: 100%; overflow: hidden;; position: relative; min-height: 500px;">
-				<div id="axis-left" style="position: relative; float: left; width: 48%; padding: 1%; text-align: left;">Enrolment window<br><em>(n=782)</em></div>
-				<div id="axis-right" style="position: relative; float: left; width: 48%; padding: 1%; text-align: right;">First follow-up window<br><em>(n=706)</em></div>
+				<div class="sankey-axis-label" id="axis-left" style="text-align: left;">Enrolment window<br><em>(n=782)</em></div>
+				<div id="axis-right" style="text-align: right;">First follow-up window<br><em>(n=706)</em></div>
 			</div>
-			<div id="sankey_basic" style="left: 0px; top: 20px; width: 100%; position: absolute; min-height: 500px;"></div>
+			<div id="sankey_basic" style="left: 0px; top: 40px; width: 100%; position: absolute; min-height: 500px;"></div>
 		</div>
 	</body>
 </html>
