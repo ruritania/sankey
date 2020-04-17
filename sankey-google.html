@@ -1,5 +1,57 @@
 <html>
 	<head>
+	</head>
+	<body>
+		<div id="chart_wrap" style="width: 100%; overflow: hidden; padding-bottom: 100%; position: relative; min-height: 500px;">
+			<style>
+				div.google-visualization-tooltip {
+					width: 200px;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 12px;
+				}
+				div.google-visualization-tooltip p { 
+					padding: 5px 10px; 
+				}
+				div.google-visualization-tooltip ul { 
+					list-style-type: circle;
+				}
+				div.sankey-axis-label {
+					position: absolute;
+					top: 0px;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 12px;
+				}
+				#sankey-footer {
+					position: relative;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 12px;
+				}
+				#sankey-footer p {
+					margin-left: 10px;
+				}
+			</style>
+			<div id="chart_titles" style="width: 100%; overflow: hidden; position: relative; min-height: 500px;">
+				<div class="sankey-axis-label" id="axis-left" style="text-align: left; left: 0px;">
+					<strong>Enrolment window</strong>
+					<br>
+					<em>(n=782)</em>
+				</div>
+				<div class="sankey-axis-label" id="axis-right" style="text-align: right; right: 0px;">
+					<strong>First follow-up window</strong>
+					<br>
+					<em>(n=706)</em>
+				</div>
+			</div>
+			<div id="sankey_basic" style="left: 0px; top: 50px; width: 100%; position: absolute; min-height: 400px;"></div>
+			<div id="sankey-footer">
+				<strong>* Treated</strong> <em>(n=551)</em>
+				<p>
+					Nintedanib <em>(n=224)</em><br />
+					Pirfenidone <em>(n=293)</em><br />
+					Nintedanib and pirfenidone <em>(n=34)</em>
+				</p>
+			</div>
+		</div>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript">
 			google.charts.load('current', {'packages':['sankey']});
@@ -78,57 +130,5 @@
 		}
 			
 		</script>
-	</head>
-	<body>
-		<div id="chart_wrap" style="width: 100%; overflow: hidden; padding-bottom: 100%; position: relative; min-height: 500px;">
-			<style>
-				div.google-visualization-tooltip {
-					width: 200px;
-					font-family: 'Montserrat', sans-serif;
-					font-size: 12px;
-				}
-				div.google-visualization-tooltip p { 
-					padding: 5px 10px; 
-				}
-				div.google-visualization-tooltip ul { 
-					list-style-type: circle;
-				}
-				div.sankey-axis-label {
-					position: absolute;
-					top: 0px;
-					font-family: 'Montserrat', sans-serif;
-					font-size: 12px;
-				}
-				#sankey-footer {
-					position: relative;
-					font-family: 'Montserrat', sans-serif;
-					font-size: 12px;
-				}
-				#sankey-footer p {
-					margin-left: 10px;
-				}
-			</style>
-			<div id="chart_titles" style="width: 100%; overflow: hidden; position: relative; min-height: 500px;">
-				<div class="sankey-axis-label" id="axis-left" style="text-align: left; left: 0px;">
-					<strong>Enrolment window</strong>
-					<br>
-					<em>(n=782)</em>
-				</div>
-				<div class="sankey-axis-label" id="axis-right" style="text-align: right; right: 0px;">
-					<strong>First follow-up window</strong>
-					<br>
-					<em>(n=706)</em>
-				</div>
-			</div>
-			<div id="sankey_basic" style="left: 0px; top: 50px; width: 100%; position: absolute; min-height: 400px;"></div>
-			<div id="sankey-footer">
-				<strong>* Treated</strong> <em>(n=551)</em>
-				<p>
-					Nintedanib <em>(n=224)</em><br />
-					Pirfenidone <em>(n=293)</em><br />
-					Nintedanib and pirfenidone <em>(n=34)</em>
-				</p>
-			</div>
-		</div>
 	</body>
 </html>
