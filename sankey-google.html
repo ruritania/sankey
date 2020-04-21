@@ -8,14 +8,21 @@
 					width: 200px;
 					font-family: 'Montserrat', sans-serif;
 					font-size: 12px;
-					padding: 5px;
+					padding: 1em;
 				}
 				div.google-visualization-tooltip p { 
-					padding: 5px 10px; 
+					margin: 0px;
+					padding: 0px;
+					line-height: 1.2em;
 				}
 				div.google-visualization-tooltip ul { 
-					margin: 1em;
+					margin: 0px;
+					padidng: 0px;
+					line-height: 1.2em;
 					list-style-type: circle;
+				}
+				div.google-visualization-tooltip li { 
+					line-height: 1.2em;
 				}
 				div.sankey-axis-label {
 					position: absolute;
@@ -30,6 +37,14 @@
 				}
 				#sankey-footer p {
 					margin-left: 10px;
+				}
+				#sankey_rollover {
+					position: absolute;
+					left: 0px;
+					top: 50px;
+					width: 10px;
+					height: 250px;
+					border: 1px dotted #990000;
 				}
 			</style>
 			<div id="chart_titles" style="width: 100%; overflow: hidden; position: relative; min-height: 500px;">
@@ -52,6 +67,8 @@
 					Pirfenidone <em>(n=293)</em><br />
 					Nintedanib and pirfenidone <em>(n=34)</em>
 				</p>
+			</div>
+			<div id="sankey_rollover">
 			</div>
 		</div>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
