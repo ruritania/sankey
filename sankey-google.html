@@ -8,7 +8,11 @@
 					width: 200px;
 					font-family: 'Montserrat', sans-serif;
 					font-size: 12px;
+					margin: 0px;
 					padding: 1em;
+  					box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+					border: none;
+					border-radius: 2px;
 				}
 				div.google-visualization-tooltip p { 
 					margin: 0px;
@@ -17,12 +21,14 @@
 				}
 				div.google-visualization-tooltip ul { 
 					margin: 0px;
-					padidng: 0px;
+					padding: 0px;
 					line-height: 1.2em;
+					margin-top: 1.2em;
 					list-style-type: circle;
 				}
 				div.google-visualization-tooltip li { 
 					line-height: 1.2em;
+					margin-left: 2em;
 				}
 				div.sankey-axis-label {
 					position: absolute;
@@ -41,10 +47,26 @@
 				#sankey_rollover {
 					position: absolute;
 					left: 0px;
-					top: 50px;
-					width: 10px;
+					top: 60px;
+					width: 20px;
 					height: 250px;
-					border: 1px dotted #990000;
+				}
+				#sankey_rollover_tooltip {
+					position: absolute;
+					left: 10px;
+					top: 100px;
+					padding: 1em;
+					background: #FFFFFF;
+					width: 200px;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 12px;
+					padding: 1em;
+  					box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+					border-radius: 2px;
+					display: none;
+				}
+				#sankey_rollover:hover #sankey_rollover_tooltip {
+					display: block;
 				}
 			</style>
 			<div id="chart_titles" style="width: 100%; overflow: hidden; position: relative; min-height: 500px;">
@@ -60,15 +82,23 @@
 				</div>
 			</div>
 			<div id="sankey_basic" style="left: 0px; top: 50px; width: 100%; position: absolute; min-height: 400px;"></div>
-			<div id="sankey-footer">
+			<!-- <div id="sankey-footer">
 				<strong>* Treated</strong> <em>(n=551)</em>
 				<p>
 					Nintedanib <em>(n=224)</em><br />
 					Pirfenidone <em>(n=293)</em><br />
 					Nintedanib and pirfenidone <em>(n=34)</em>
 				</p>
-			</div>
+			</div> -->
 			<div id="sankey_rollover">
+				<div id="sankey_rollover_tooltip">
+					<strong>Treated</strong> <em>(n=551)</em>
+					<p>
+						Nintedanib <em>(n=224)</em><br />
+						Pirfenidone <em>(n=293)</em><br />
+						Nintedanib and pirfenidone <em>(n=34)</em>
+					</p>
+				</div>
 			</div>
 		</div>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -83,9 +113,9 @@
 			data.addColumn('number', 'Number');
 			data.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 			data.addRows([
-				[ 'Treated* (n=551)', 'Treated', 502, "<p>Treated in enrolment window and in first follow-up window <br /><em>(n=502)</em></p>"],
-				[ 'Treated* (n=551)', 'Untreated', 32, "<p>Treated in enrolment window but stopped in first follow-up window<br /><em>(n=32)</em></p>"],
-				[ 'Treated* (n=551)', 'No treatment information available', 17, "<p>Treated in enrolment window but no treatment information available in first follow-up window <em>(n=17)</em><ul><li>Death, lung transplant or withdrawal <em>(n=5)</em></li><li>No follow-up medical chart review <em>(n=7)</em></li><li>Incomplete treatment information <em>(n=5)</em></li></ul>"],
+				[ 'Treated (n=551)', 'Treated', 502, "<p>Treated in enrolment window and in first follow-up window <br /><em>(n=502)</em></p>"],
+				[ 'Treated (n=551)', 'Untreated', 32, "<p>Treated in enrolment window but stopped in first follow-up window<br /><em>(n=32)</em></p>"],
+				[ 'Treated (n=551)', 'No treatment information available', 17, "<p>Treated in enrolment window but no treatment information available in first follow-up window <em>(n=17)</em><ul><li>Death, lung transplant or withdrawal <em>(n=5)</em></li><li>No follow-up medical chart review <em>(n=7)</em></li><li>Incomplete treatment information <em>(n=5)</em></li></ul>"],
 				[ 'Untreated (n=231)', 'Treated', 51, "<p>Untreated in enrolment window but treated in first follow-up window<br /><em>(n=51)</em></p>"],
 				[ 'Untreated (n=231)', 'Untreated', 121, "<p>Untreated in enrolment window and remained untreated in first follow-up window<br /><em>(n=121)</em></p>"],
 				[ 'Untreated (n=231)', 'No treatment information available', 59, "<p>Untreated in enrolment window but no treatment information available in first follow-up window <em>(n=59)</em><ul><li>Death, lung transplant or withdrawal <em>(n=22)</em></li><li>No follow-up medical chart review <em>(n=33)</em></li><li>Incomplete treatment information <em>(n=4)</em></li></ul></p>"]
