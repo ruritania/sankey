@@ -1,12 +1,22 @@
 <html>
 	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div id="chart_wrap" style="width: 100%; overflow: hidden; padding-bottom: 100%; position: relative; min-height: 500px;">
+		<div style="width: 750px; padding: 40px 110px;">
+		
+			<div style="font-family: 'Open Sans', sans-serif; color: #55c2d3; font-size: 28px; font-weight: 700; margin-bottom: 0.5em;">Antifibrotic medication use in enrolment window and first follow-up window</div>
+			<div style="font-family: 'Open Sans', sans-serif; color: #818181; font-size: 18px; font-weight: bold; margin-bottom: 1em;">Hover or click over each of the coloured bars within the diagram to see use of antifibrotic medication in the enrolment window and the first follow-up window.</div>
+		
+			
+			
+			
+			
+			<div id="chart_wrap" style="width: 100%; overflow: hidden; padding-bottom: 100%; position: relative; min-height: 500px;">
 			<style>
 				div.google-visualization-tooltip {
 					width: 200px;
-					font-family: 'Verdana', sans-serif;
+					font-family: 'Open Sans', sans-serif;
 					font-size: 12px;
 					margin: 0px;
 					padding: 1em;
@@ -33,12 +43,12 @@
 				div.sankey-axis-label {
 					position: absolute;
 					top: 0px;
-					font-family: 'Verdana', sans-serif;
+					font-family: 'Open Sans', sans-serif;
 					font-size: 12px;
 				}
 				#sankey-footer {
 					position: relative;
-					font-family: 'Verdana', sans-serif;
+					font-family: 'Open Sans', sans-serif;
 					font-size: 12px;
 				}
 				#sankey-footer p {
@@ -53,27 +63,37 @@
 				}
 				#sankey_rollover_tooltip {
 					position: absolute;
-					left: 10px;
-					top: 100px;
+					left: 100px;
+					top: 20px;
 					padding: 1em;
 					background: #FFFFFF;
 					width: 200px;
-					font-family: 'Verdana', sans-serif;
+					font-family: 'Open Sans', sans-serif;
 					font-size: 12px;
 					padding: 1em;
   					box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 					border-radius: 2px;
 					display: none;
+					z-index: 100;
 				}
-				#sankey_rollover:hover #sankey_rollover_tooltip {
+				#axis-left:hover #sankey_rollover_tooltip {
 					display: block;
 				}
 			</style>
-			<div id="chart_titles" style="width: 100%; overflow: hidden; position: relative; min-height: 500px;">
+			<div id="chart_titles" style="width: 100%; overflow: hidden; position: absolute; top: 0px; left: 0px; min-height: 500px;">
 				<div class="sankey-axis-label" id="axis-left" style="text-align: left; left: 0px;">
 					<strong>Enrolment window</strong>
 					<br>
 					<em>(n=782)</em>
+					<div id="sankey_rollover_tooltip">
+						<strong>Treated</strong> <em>(n=551)</em>
+						<ul>
+							<li>Nintedanib <em>(n=224)</em></li>
+							<li>Pirfenidone <em>(n=293)</em></li>
+							<li>Nintedanib and pirfenidone <em>(n=34)</em></li>
+						</ul>
+						<strong>Untreated</strong> <em>(n=231)</em>
+					</div>
 				</div>
 				<div class="sankey-axis-label" id="axis-right" style="text-align: right; right: 0px;">
 					<strong>First follow-up window</strong>
@@ -82,24 +102,6 @@
 				</div>
 			</div>
 			<div id="sankey_basic" style="left: 0px; top: 50px; width: 100%; position: absolute; min-height: 400px;"></div>
-			<!-- <div id="sankey-footer">
-				<strong>* Treated</strong> <em>(n=551)</em>
-				<p>
-					Nintedanib <em>(n=224)</em><br />
-					Pirfenidone <em>(n=293)</em><br />
-					Nintedanib and pirfenidone <em>(n=34)</em>
-				</p>
-			</div> -->
-			<div id="sankey_rollover">
-				<div id="sankey_rollover_tooltip">
-					<strong>Treated</strong> <em>(n=551)</em>
-					<p>
-						Nintedanib <em>(n=224)</em><br />
-						Pirfenidone <em>(n=293)</em><br />
-						Nintedanib and pirfenidone <em>(n=34)</em>
-					</p>
-				</div>
-			</div>
 		</div>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript">
@@ -130,7 +132,7 @@
 						colors: colors,
 						width: 20,
 						label: { 
-							fontName: 'Verdana',
+							fontName: 'Open Sans',
 							fontSize: 12,
 							color: '#FFFFFF',
 							bold: true
@@ -158,5 +160,6 @@
 		}
 			
 		</script>
+		</div>
 	</body>
 </html>
