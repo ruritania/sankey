@@ -30,15 +30,14 @@
 					line-height: 1.2em;
 				}
 				div.google-visualization-tooltip ul { 
-					margin: 0px;
+					position: relative;
 					padding: 0px;
 					line-height: 1.2em;
-					margin-top: 1.2em;
 					list-style-type: circle;
 				}
 				div.google-visualization-tooltip li { 
-					line-height: 1.2em;
 					margin-left: 2em;
+					line-height: 1.2em;
 				}
 				div.sankey-axis-label {
 					position: absolute;
@@ -76,6 +75,15 @@
 					display: none;
 					z-index: 100;
 				}
+				#sankey_rollover_tooltip ul {
+					position: relative;
+					padding: 0px;
+					line-height: 1.2em;
+					list-style-type: circle;
+				}
+				#sankey_rollover_tooltip li {
+					margin-left: 2em;
+				}
 				#axis-left:hover #sankey_rollover_tooltip {
 					display: block;
 				}
@@ -84,7 +92,7 @@
 				<div class="sankey-axis-label" id="axis-left" style="text-align: left; left: 0px;">
 					<strong>Enrolment window</strong>
 					<br>
-					<em>(n=782)</em>
+					<em>(n=782) - rollover for more detail</em>
 					<div id="sankey_rollover_tooltip">
 						<strong>Treated</strong> <em>(n=551)</em>
 						<ul>
@@ -115,12 +123,12 @@
 			data.addColumn('number', 'Number');
 			data.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 			data.addRows([
-				[ 'Treated (n=551)', 'Treated', 502, "<p>Treated in enrolment window and in first follow-up window <br /><em>(n=502)</em></p>"],
-				[ 'Treated (n=551)', 'Untreated', 32, "<p>Treated in enrolment window but stopped in first follow-up window<br /><em>(n=32)</em></p>"],
-				[ 'Treated (n=551)', 'No treatment information available', 17, "<p>Treated in enrolment window but no treatment information available in first follow-up window <em>(n=17)</em><ul><li>Death, lung transplant or withdrawal <em>(n=5)</em></li><li>No follow-up medical chart review <em>(n=7)</em></li><li>Incomplete treatment information <em>(n=5)</em></li></ul>"],
-				[ 'Untreated (n=231)', 'Treated', 51, "<p>Untreated in enrolment window but treated in first follow-up window<br /><em>(n=51)</em></p>"],
-				[ 'Untreated (n=231)', 'Untreated', 121, "<p>Untreated in enrolment window and remained untreated in first follow-up window<br /><em>(n=121)</em></p>"],
-				[ 'Untreated (n=231)', 'No treatment information available', 59, "<p>Untreated in enrolment window but no treatment information available in first follow-up window <em>(n=59)</em><ul><li>Death, lung transplant or withdrawal <em>(n=22)</em></li><li>No follow-up medical chart review <em>(n=33)</em></li><li>Incomplete treatment information <em>(n=4)</em></li></ul></p>"]
+				[ 'Treated ', 'Treated', 502, "<p>Treated in enrolment window and in first follow-up window <br /><em>(n=502)</em></p>"],
+				[ 'Treated ', 'Untreated', 32, "<p>Treated in enrolment window but stopped in first follow-up window<br /><em>(n=32)</em></p>"],
+				[ 'Treated ', 'No treatment information available', 17, "<p>Treated in enrolment window but no treatment information available in first follow-up window <em>(n=17)</em><ul><li>Death, lung transplant or withdrawal <em>(n=5)</em></li><li>No follow-up medical chart review <em>(n=7)</em></li><li>Incomplete treatment information <em>(n=5)</em></li></ul>"],
+				[ 'Untreated ', 'Treated', 51, "<p>Untreated in enrolment window but treated in first follow-up window<br /><em>(n=51)</em></p>"],
+				[ 'Untreated ', 'Untreated', 121, "<p>Untreated in enrolment window and remained untreated in first follow-up window<br /><em>(n=121)</em></p>"],
+				[ 'Untreated ', 'No treatment information available', 59, "<p>Untreated in enrolment window but no treatment information available in first follow-up window <em>(n=59)</em><ul><li>Death, lung transplant or withdrawal <em>(n=22)</em></li><li>No follow-up medical chart review <em>(n=33)</em></li><li>Incomplete treatment information <em>(n=4)</em></li></ul></p>"]
 			]);
 		  
 			var colors = ['#00529b','#00529b','#8ed8f8','#88c540','#8ed8f8'];
@@ -160,6 +168,9 @@
 		}
 			
 		</script>
+			
+			
+			
 		</div>
 	</body>
 </html>
