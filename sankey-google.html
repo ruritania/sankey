@@ -46,7 +46,8 @@
 					font-size: 12px;
 				}
 				#sankey-footer {
-					position: relative;
+					position: absolute;
+					top: 450px;
 					font-family: 'Open Sans', sans-serif;
 					font-size: 12px;
 				}
@@ -91,11 +92,6 @@
 				#axis-left {
     				cursor: pointer;
 				}
-				#sankey-footnote {
-					position:  relative;
-					font-family: 'Open Sans', sans-serif;
-					font-size: 12px;
-				}
 			</style>
 			<div id="chart_titles" style="width: 100%; overflow: hidden; position: absolute; top: 0px; left: 0px; min-height: 500px;">
 				<div class="sankey-axis-label" id="axis-left" style="text-align: left; left: 0px;" onclick="">
@@ -119,7 +115,7 @@
 				</div>
 			</div>
 			<div id="sankey_basic" style="left: 0px; top: 50px; width: 100%; position: absolute; min-height: 400px;"></div>
-			<div id="sankey-footnote">
+			<div id="sankey-footer">
 				<p>If the start and/or stop date for either drug was prior to or within the first 3 months after enrollment, or “yes” was marked for antifibrotic medication use on the enrollment case report form, the patient was “treated” at enrollment. If medication start and/or stop dates or a “yes” mark on the case report form indicated treatment use between 3-8 months after enrollment, the patient was “treated” in the first follow-up window.</p>
 			</div>
 		</div>
