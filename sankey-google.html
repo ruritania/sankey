@@ -62,9 +62,6 @@
 					height: 250px;
 				}
 				#sankey_rollover_tooltip {
-					position: absolute;
-					left: 100px;
-					top: 20px;
 					padding: 1em;
 					background: #FFFFFF;
 					width: 200px;
@@ -75,6 +72,7 @@
 					border-radius: 2px;
 					display: none;
 					z-index: 100;
+					text-align: left;
 				}
 				#sankey_rollover_tooltip ul {
 					position: relative;
@@ -85,11 +83,30 @@
 				#sankey_rollover_tooltip li {
 					margin-left: 2em;
 				}
+				.sankey-rollover-tooltip-left
+				{
+					position: absolute;
+					left: 100px;
+					top: 20px;
+				}
+				.sankey-rollover-tooltip-right
+				{
+					position: absolute;
+					right: 50px;
+					top: 20px;
+				}
 				#axis-left:focus #sankey_rollover_tooltip,
 				#axis-left:hover #sankey_rollover_tooltip {
 					display: block;
 				}
 				#axis-left {
+    				cursor: pointer;
+				}
+				#axis-right:focus #sankey_rollover_tooltip,
+				#axis-right:hover #sankey_rollover_tooltip {
+					display: block;
+				}
+				#axis-right {
     				cursor: pointer;
 				}
 			</style>
@@ -98,7 +115,7 @@
 					<strong>Enrollment window</strong>
 					<br>
 					<em>(n=782) - rollover for more detail</em>
-					<div id="sankey_rollover_tooltip">
+					<div id="sankey_rollover_tooltip" class="sankey-rollover-tooltip-left">
 						<strong>Treated</strong> <em>(n=551)</em>
 						<ul>
 							<li>Nintedanib <em>(n=224)</em></li>
@@ -112,6 +129,15 @@
 					<strong>First follow-up window</strong>
 					<br>
 					<em>(n=706)</em>
+					<div id="sankey_rollover_tooltip" class="sankey-rollover-tooltip-right">
+						<strong>Treated</strong> <em>(n=553)</em>
+						<ul>
+							<li>Nintedanib <em>(n=236)</em></li>
+							<li>Pirfenidone <em>(n=285)</em></li>
+							<li>Nintedanib and pirfenidone <em>(n=32)</em></li>
+						</ul>
+						<strong>Untreated</strong> <em>(n=153)</em>
+					</div>
 				</div>
 			</div>
 			<div id="sankey_basic" style="left: 0px; top: 50px; width: 100%; position: absolute; min-height: 400px;"></div>
