@@ -100,6 +100,8 @@
 					display: block;
 				}
 				#axis-left {
+					text-align: left; 
+					left: 0px;
     				cursor: pointer;
 				}
 				#axis-right:focus #sankey_rollover_tooltip,
@@ -108,10 +110,12 @@
 				}
 				#axis-right {
     				cursor: pointer;
+					text-align: right; 
+					right: 5px;
 				}
 			</style>
 			<div id="chart_titles" style="width: 100%; overflow: hidden; position: absolute; top: 0px; left: 0px; min-height: 500px;">
-				<div class="sankey-axis-label" id="axis-left" style="text-align: left; left: 0px;" onclick="">
+				<div class="sankey-axis-label" id="axis-left" onclick="">
 					<strong>Enrollment window</strong>
 					<br>
 					<em>(n=782) - rollover for more detail</em>
@@ -125,7 +129,7 @@
 						<strong>Untreated</strong> <em>(n=231)</em>
 					</div>
 				</div>
-				<div class="sankey-axis-label" id="axis-right" style="text-align: right; right: 5px;">
+				<div class="sankey-axis-label" id="axis-right" onclick="">
 					<strong>First follow-up window</strong>
 					<br>
 					<em>(n=706) - rollover for more detail</em>
