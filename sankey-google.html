@@ -119,7 +119,7 @@
 				<div class="sankey-axis-label" id="axis-left" onclick="">
 					<strong>Enrollment window</strong>
 					<br>
-					<em>(n=782)<br />rollover for more</em>
+					<em>(n=782)<br />Hover or click for more</em>
 					<div id="sankey_rollover_tooltip" class="sankey-rollover-tooltip-left">
 						<strong>Treated</strong> <em>(n=551)</em>
 						<ul>
@@ -133,7 +133,7 @@
 				<div class="sankey-axis-label" id="axis-right" onclick="">
 					<strong>First follow-up window</strong>
 					<br>
-					<em>(n=706)<br />rollover for more</em>
+					<em>(n=706)<br />Hover or click for more</em>
 					<div id="sankey_rollover_tooltip" class="sankey-rollover-tooltip-right">
 						<strong>Treated</strong> <em>(n=553)</em>
 						<ul>
@@ -164,10 +164,10 @@
 			data.addRows([
 				[ 'Treated ', 'Treated', 502, "<p>Treated in enrollment window and in first follow-up window <br /><em>(n=502)</em></p>"],
 				[ 'Treated ', 'Untreated', 32, "<p>Treated in enrollment window but stopped in first follow-up window<br /><em>(n=32)</em></p>"],
-				[ 'Treated ', 'No treatment information available', 17, "<p>Treated in enrollment window but no treatment information available in first follow-up window <em>(n=17)</em><ul><li>Death, lung transplant or withdrawal <em>(n=5)</em></li><li>No chart review or incomplete treatment information <em>(n=12)</em></li></ul>"],
+				[ 'Treated ', 'No treatment information available', 17, "<p>Treated in enrollment window and no treatment information available in first follow-up window <em>(n=17)</em><ul><li>Death, lung transplant or withdrawal <em>(n=5)</em></li><li>No chart review or incomplete treatment information <em>(n=12)</em></li></ul>"],
 				[ 'Untreated ', 'Treated', 51, "<p>Untreated in enrollment window but treated in first follow-up window<br /><em>(n=51)</em></p>"],
 				[ 'Untreated ', 'Untreated', 121, "<p>Untreated in enrollment window and remained untreated in first follow-up window<br /><em>(n=121)</em></p>"],
-				[ 'Untreated ', 'No treatment information available', 59, "<p>Untreated in enrollment window but no treatment information available in first follow-up window <em>(n=59)</em><ul><li>Death, lung transplant or withdrawal <em>(n=22)</em></li><li>No chart review or incomplete treatment information <em>(n=37)</em></li></ul></p>"]
+				[ 'Untreated ', 'No treatment information available', 59, "<p>Untreated in enrollment window and no treatment information available in first follow-up window <em>(n=59)</em><ul><li>Death, lung transplant or withdrawal <em>(n=22)</em></li><li>No chart review or incomplete treatment information <em>(n=37)</em></li></ul></p>"]
 			]);
 		  
 			var colors = ['#00529b','#00529b','#8ed8f8','#88c540','#8ed8f8'];
